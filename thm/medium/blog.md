@@ -1,8 +1,3 @@
----
-layout: page
-title: Blog Writeup
-theme: jekyll-theme-hacker
----
 # BLOG
 
 ## Description
