@@ -1,3 +1,7 @@
+```
+layout: page
+title: Blog Writeup
+```
 # BLOG
 
 ## Description
